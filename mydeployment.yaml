@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: simplest-py-http
+  name: simplest-py-http
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simplest-py-http
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: simplest-py-http
+    spec:
+      containers:
+      - image: pyhttpserv:latest
+        name: pyhttpserv
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+        resources: {}

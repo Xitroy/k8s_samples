@@ -20,6 +20,8 @@ curl $(minikube ip):$NODE_PORT
 echo $(minikube ip):$NODE_PORT 
 И посмотреть результат в браузере (можно поползать по файловой системе контейнера)
 
+====
 
+Альтернативный вариант установки - с помощью helm
 
-
+3. helm install simplest-pyserv pyserv-http/
